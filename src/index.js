@@ -1,15 +1,42 @@
 import React from 'react';
 import ReactDom from 'react-dom'
 
-// function Greeting(){
-//   return (
-//   <div>
-//   <h4>This is ife and this is my first component</h4>
-//   </div>
-//   );
-// };
+//CSS
+import './index.css';
 
-const Greeting = () => {
-return React.createElement('div', {}, React.createElement('h1', {}, 'hello world'))
+function BookList(){
+  return (
+  <section className= "book">
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+  </section>
+  );
+
+};
+
+const Book = () => {
+return(
+  <article className="books">
+    <Image></Image>
+    <Title></Title>
+    <Author></Author>
+    </article>
+);
 }
-ReactDom.render(<Greeting/>, document.getElementById("root"));
+const Image = () => (
+  <img src="https://m.media-amazon.com/images/I/71hvJ2eS6kL._AC_UY218_.jpg" alt=""/>
+)
+const Title = () => <h1>God is Good</h1>
+const Author =() => <h4>ifeoluwa oladeni</h4>
+// const Greeting = () => {
+// return React.createElement('div', {}, React.createElement('h1', {}, 'hello world'))
+// }
+ReactDom.render(<BookList/>, document.getElementById("root"));
