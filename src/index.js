@@ -14,13 +14,11 @@ function BookList(){
     <Book />
     <Book />
     <Book />
-    <Book />
-    <Book />
-    <Book />
   </section>
   );
 
 };
+
 
 const Book = () => {
   const title = 'God is Good';
