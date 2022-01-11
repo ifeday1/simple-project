@@ -23,19 +23,16 @@ function BookList(){
 };
 
 const Book = () => {
+  const title = 'God is Good';
+  const author = 'ifeoluua oladeni';
 return(
   <article className="books">
-    <Image></Image>
-    <Title></Title>
-    <Author></Author>
+    <img src="https://m.media-amazon.com/images/I/71hvJ2eS6kL._AC_UY218_.jpg" alt="" />
+    <h1>{title}</h1>
+    <h4> {author} </h4>
     </article>
 );
 }
-const Image = () => (
-  <img src="https://m.media-amazon.com/images/I/71hvJ2eS6kL._AC_UY218_.jpg" alt=""/>
-)
-const Title = () => <h1>God is Good</h1>
-const Author =() => <h4>ifeoluwa oladeni</h4>
 // const Greeting = () => {
 // return React.createElement('div', {}, React.createElement('h1', {}, 'hello world'))
 // }
