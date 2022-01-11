@@ -3,31 +3,39 @@ import ReactDom from 'react-dom'
 
 //CSS
 import './index.css';
-
+//setup vars
+const firstBook = {
+  img:'https://m.media-amazon.com/images/I/71hvJ2eS6kL._AC_UY218_.jpg',
+  title:'God is Good',
+  author:'ifeoluwa oladeni'
+}
+const secondBook = {
+  img:'https://m.media-amazon.com/images/I/71rIWTdOyqL._AC_UL320_.jpg',
+  title:'working on progress',
+  author:'oladeni ifeoluwa'
+}
+ 
 function BookList(){
   return (
   <section className= "book">
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
+    <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+    <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
+
   </section>
   );
 
 };
 
 
-const Book = () => {
-  const title = 'God is Good';
-  const author = 'ifeoluua oladeni';
+const Book = (props) => {
+ console.log(props)
 return(
   <article className="books">
-    <img src="https://m.media-amazon.com/images/I/71hvJ2eS6kL._AC_UY218_.jpg" alt="" />
-    <h1>{title}</h1>
-    <h4> {author} </h4>
+    <img src= {props.img} alt=""/>
+    <h1>{props.title}</h1>
+    <h4> {props.author} </h4>
+    
+
     </article>
 );
 }
